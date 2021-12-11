@@ -1,20 +1,21 @@
 import turtle as t
 def square():
     print("Please write to console size sides (at pixels):")
-    side = input()
+    side = int(input())
     for i in range(4):
         t.forward(side)
         t.right(90)
 def triangle():
     print("Please write to console size sides (at pixels):")
-    side = input()
-    for i in range(3):
+    side = int(input())
+    t.forward(side)
+    for i in range(2):
+        t.left(120)
         t.forward(side)
-        t.right(60)
 def rectangle():
     print("Please write to console size sides (at pixels):")
-    side = input()
-    side_ = input()
+    side = int(input())
+    side_ = int(input())
     t.forward(side)
     t.right(90)
 def rhombussquare(): #sorry, i dont know how i can create rhombus :)
@@ -24,10 +25,9 @@ def rhombussquare(): #sorry, i dont know how i can create rhombus :)
     for i in range(4):
         t.forward(side)
         t.left(90)
-rhombussquare()
-rectangle()
-square()
-triangle()
+def circle():
+    print("Please write to console size for circle (at pixels):")
+    size = int(input())
+    t.circle(size)
 t.hideturtle()
-t.done()
 t.screensize(100,100)
