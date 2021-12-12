@@ -29,5 +29,21 @@ def circle():
     print("Please write to console size for circle (at pixels):")
     size = int(input())
     t.circle(size)
+def spiralsquares():
+    size=int(input())
+    while (True):
+        t.forward(size)
+        t.right(91)
+        size = size + 1
+def yellowstar():
+    t.pen(pencolor='red', fillcolor='yellow')
+    t.fill(True)
+    while True:
+        t.forward(200)
+        t.left(170)
+        if abs(turtle.pos()) < 1:
+            break
+    t.fill(False)
+t.done()
 t.hideturtle()
 t.screensize(100,100)
